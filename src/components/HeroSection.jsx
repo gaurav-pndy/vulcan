@@ -82,20 +82,36 @@ export default function HeroSection({ features }) {
       </div>
 
       {/* Hero Content */}
-      <div className="relative max-w-7xl mx-auto w-full z-10 flex flex-col justify-center items-center md:items-start h-full pb-28 pt-40 text-center md:text-left lg:pt-0 lg:h-screen px-4 xl:px-0">
-        <h1 className="text-white text-3xl font-bold  md:text-[4.2rem] drop-shadow-xl drop-shadow-black ">
+      <div className="relative max-w-7xl mx-auto w-full z-10 flex flex-col justify-center items-center md:items-start h-full pb-28 pt-40 text-center md:text-left lg:pt-0 lg:h-screen px-4 xl:px- overflo">
+        <motion.h1
+          initial={{ opacity: 0, y: 150 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 1.2, ease: "easeOut" },
+          }}
+          className="text-white text-3xl font-bold  md:text-[4.2rem] drop-shadow-xl drop-shadow-black "
+        >
           BE THE BEST
           <br />
           PILOT YOU CAN BE!
-        </h1>
-        <div className="mt-8 flex text-xs md:text-base gap-4">
+        </motion.h1>
+        <motion.div
+          initial={{ opacity: 0, x: -150 }}
+          animate={{
+            opacity: 1,
+            x: 0,
+            transition: { duration: 0.8, ease: "easeOut", delay: 0.8 },
+          }}
+          className="mt-8 flex text-xs md:text-base gap-4"
+        >
           <button className="px-6 py-2.5 rounded-full border-2 border-white bg-white/10 text-white  font-medium cursor-pointer transition-all duration-300 hover:bg-white hover:text-[#c7102e]">
             REGISTER NOW
           </button>
           <button className="px-6 py-2.5 rounded-full border-2 border-white bg-[#c7102e] text-white font-medium shadow-xl hover:bg-white hover:text-[#c7102e] cursor-pointer transition-all duration-300">
             WATCH NOW
           </button>
-        </div>
+        </motion.div>
       </div>
 
       {/* Feature Boxes */}

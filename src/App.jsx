@@ -10,6 +10,8 @@ import { IoMdCheckmark } from "react-icons/io";
 import Courses from "./components/Courses";
 import VideoSection from "./components/VideoSection";
 import Testimonials from "./components/Testimonials";
+import Experts from "./components/Experts";
+import Contact from "./components/Contact";
 
 function App() {
   const features = [
@@ -47,6 +49,15 @@ function App() {
       <Courses />
       <VideoSection />
       <Testimonials />
+      <Experts />
+      <Contact />
+      <footer className="bg-[#c7102e] w-full py-4">
+        <div className="max-w-7xl mx-auto px-2 flex justify-center ">
+          <span className="text-white text-base text-center">
+            Copyright © 2025 Vulcan Aviation | Designed By InsideOut
+          </span>
+        </div>
+      </footer>
     </div>
   );
 }
