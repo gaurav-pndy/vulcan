@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+
+@keyframes vibrate {
+   0% { transform: rotate(0deg); }
+  10% { transform: scale(1.1) rotate(-10deg); }
+  20% { transform: scale(1.1) rotate(10deg); }
+  30% { transform: scale(1.1) rotate(-10deg); }
+  40% { transform: scale(1.1) rotate(10deg); }
+  50% { transform: scale(1.1) rotate(-10deg); }
+  60% { transform: scale(1) rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.vibrate {
+  animation: vibrate 1s ease-in-out infinite;
+}
+
+@keyframes heroZoomFade {
+  from {
+    transform: scale(1);
+  }
+ 
+  to {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000000 !important; 
+}
+
+.swiper-pagination-bullets {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 1rem;
+}
+.swiper-pagination-bullet {
+  display: block !important;
+  margin: 0 5px !important;
+  border-radius: 50% !important;
+  background: #c7102e !important; /* inactive color */
+  opacity: 1 !important;
+  width: 10px !important;
+  height: 10px !important;
+  cursor:  pointer !important;
+}
+
+.swiper-pagination-bullet-active {
+scale: 1.2 !important; /* active color */
+}
